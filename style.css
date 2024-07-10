@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300..500");
+
+:root {
+  --color-blue-100: hsl(236, 100%, 87%);
+  --color-blue-200: hsl(235, 45%, 61%);
+  --color-blue-300: hsl(195, 74%, 62%);
+  --color-blue-400: hsl(264, 64%, 52%);
+  --color-blue-500: hsl(246, 80%, 60%);
+  --color-blue-800: hsl(235, 46%, 20%);
+  --color-blue-900: hsl(226, 43%, 10%);
+
+  --color-red-100: hsl(43, 84%, 65%);
+  --color-red-200: hsl(15, 100%, 70%);
+  --color-red-400: hsl(348, 100%, 68%);
+
+  --color-green-200: hsl(145, 58%, 55%);
+}
+
+@font-face {
+  font-family: "primary-font";
+  src: url("./images/");
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--color-blue-900);
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+
+.container {
+  margin: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.flex {
+  display: flex;
+}
+.gap-20 {
+  gap: 20px;
+}
+.flex.flex-col {
+  flex-direction: column;
+}
+.flex.items-center {
+  align-items: center;
+}
+.flex.justify-center {
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: clip;
+}
+.card-profile {
+  background-color: var(--color-blue-800);
+}
+.card-footer {
+  padding: 5px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-footer > p {
+  text-align: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.desc {
+  color: white;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}
+.title {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.profile {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: var(--color-blue-500);
+}
+
+.card-work {
+  background-color: var(--color-red-200);
+}
+
+.card-play {
+  background-color: var(--color-blue-300);
+}
+
+.card-study {
+  background-color: var(--color-red-400);
+}
+
+.card-exercise {
+  background-color: var(--color-green-200);
+}
+
+.card-social {
+  background-color: var(--color-blue-400);
+}
+
+.card-care {
+  background-color: var(--color-red-100);
+}
+
+.pre {
+  height: 30px;
+}
+
+.card-content {
+  background-color: var(--color-blue-800);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.info {
+  font-weight: 400;
+  margin: 0;
+}
+.data {
+  margin: 5px 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.options {
+  text-align: right;
+}
+
+.prev {
+  color: var(--color-blue-100);
+  font-size: 0.75rem;
+}
+
+.pre {
+  overflow: clip;
+  text-align: right;
+}
+.pre > img {
+  position: relative;
+  top: -10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: 678px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card-profile {
+        grid-row: 1 / span 2;
+      }
+}
